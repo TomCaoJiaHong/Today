@@ -10,5 +10,6 @@ import Foundation
 extension Date{
     var dayAndTimeText: String{
         let timeText = formatted(date: .omitted, time: .shortened)
+        
     }
 }
