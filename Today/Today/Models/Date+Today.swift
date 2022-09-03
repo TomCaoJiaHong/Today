@@ -13,8 +13,11 @@ extension Date{
         
         if Locale.current.calendar.isDateInToday(self){
             let timeFormat = NSLocalizedString("Today at %@", comment: "Today at time format string")
+            return String(format: timeFormat, timeText)
         }else{
-            
+            let dateText = formatted(.dateTime.month(.abbreviated).day())
+            let dateAndTimeFormat = NSLocalizedString("%@ at %@", comment: "Daye and time format string")
+            return String(format: dateAndTimeFormat, dateText, timeText)
         }
     }
 }
