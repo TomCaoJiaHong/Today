@@ -5,4 +5,9 @@
 //  Created by 曹嘉鸿 on 2022-09-09.
 //
 
-import Foundation
+import UIKit
+
+extension ReminderListViewController {
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
+}
