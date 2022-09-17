@@ -10,4 +10,7 @@ import UIKit
 extension ReminderListViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
+    
+    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: String) {
+    }
 }
