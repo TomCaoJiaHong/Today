@@ -15,6 +15,7 @@ extension ReminderListViewController {
         let reminder = Reminder.sampleData[indexPath.item]
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title
+        contentConfiguration.secondaryText = reminder.dueDate.dayAndTimeText
         cell.contentConfiguration = contentConfiguration
     }
 }
