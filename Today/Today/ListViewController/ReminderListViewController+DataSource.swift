@@ -28,5 +28,7 @@ extension ReminderListViewController {
         let symbolName = reminder.isComplete ? "circle.fill" : "circle"
         let symbolConfiguration = UIImage.SymbolConfiguration(textStyle: .title1)
         let image = UIImage(systemName: symbolName, withConfiguration: symbolConfiguration)
+        let button = UIButton()
+        button.setImage(image, for: .normal)
     }
 }
