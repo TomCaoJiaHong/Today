@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Reminder{
+struct Reminder: Identifiable {
+    var id: String == UUID().uuidString
     var title: String
     var dueDate: Date
     var notes: String? = nil
@@ -15,7 +16,7 @@ struct Reminder{
 }
 
 #if DEBUG
-extension Reminder{
+extension Reminder {
     static var sampleData = [
         Reminder(title: "Submit reimbursement report", dueDate: Date().addingTimeInterval(800.0), notes: "Don't forget about taxi receipts"),
         Reminder(title: "Code review", dueDate: Date().addingTimeInterval(14000.0), notes: "Check tech specs in shared folder", isComplete: true),
